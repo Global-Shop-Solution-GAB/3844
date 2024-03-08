@@ -1,0 +1,687 @@
+Program.Sub.ScreenSU.Start
+Gui.SS_Form1..create
+Gui.SS_Form1..caption("State Unemployment Tax Report")
+Gui.SS_Form1..size(5020,6330)
+Gui.SS_Form1..minx(0)
+Gui.SS_Form1..miny(0)
+Gui.SS_Form1..position(0,0)
+Gui.SS_Form1..event(UnLoad,ss_form1_unload)
+Gui.SS_Form1..alwaysontop(False)
+Gui.SS_Form1..fontname("Arial")
+Gui.SS_Form1..fontsize(8)
+Gui.SS_Form1..forecolor(0)
+Gui.SS_Form1..fontstyle(,)
+Gui.SS_Form1..BackColor(-2147483633)
+Gui.SS_Form1..controlbox(True)
+Gui.SS_Form1..maxbutton(False)
+Gui.SS_Form1..minbutton(False)
+Gui.SS_Form1..mousepointer(0)
+Gui.SS_Form1..moveable(True)
+Gui.SS_Form1..sizeable(False)
+Gui.SS_Form1..ShowInTaskBar(True)
+Gui.SS_Form1..titlebar(True)
+Gui.SS_Form1.lbl_dtpFromDate.create(label,"From Date",True,1800,200,1,100,135,True,0,Arial,8,-2147483633,0)
+Gui.SS_Form1.lbl_dtpFromDate.defaultvalue("")
+Gui.SS_Form1.lbl_dtpFromDate.controlgroup(0)
+Gui.SS_Form1.dtpFromDate.create(datepicker)
+Gui.SS_Form1.dtpFromDate.visible(True)
+Gui.SS_Form1.dtpFromDate.size(1800,345)
+Gui.SS_Form1.dtpFromDate.zorder(0)
+Gui.SS_Form1.dtpFromDate.position(100,335)
+Gui.SS_Form1.dtpFromDate.enabled(True)
+Gui.SS_Form1.dtpFromDate.checkbox(False)
+Gui.SS_Form1.dtpFromDate.defaultvalue("")
+Gui.SS_Form1.dtpFromDate.controlgroup(0)
+Gui.SS_Form1.dtpFromDate.tabstop(True)
+Gui.SS_Form1.dtpFromDate.tabindex(1)
+Gui.SS_Form1.lbl_dtpToDate.create(label,"To Date",True,1800,200,1,1985,135,True,0,Arial,8,-2147483633,0)
+Gui.SS_Form1.lbl_dtpToDate.defaultvalue("")
+Gui.SS_Form1.lbl_dtpToDate.controlgroup(0)
+Gui.SS_Form1.dtpToDate.create(datepicker)
+Gui.SS_Form1.dtpToDate.visible(True)
+Gui.SS_Form1.dtpToDate.size(1800,345)
+Gui.SS_Form1.dtpToDate.zorder(0)
+Gui.SS_Form1.dtpToDate.position(1985,335)
+Gui.SS_Form1.dtpToDate.enabled(True)
+Gui.SS_Form1.dtpToDate.checkbox(False)
+Gui.SS_Form1.dtpToDate.defaultvalue("")
+Gui.SS_Form1.dtpToDate.controlgroup(0)
+Gui.SS_Form1.dtpToDate.tabstop(True)
+Gui.SS_Form1.dtpToDate.tabindex(2)
+Gui.SS_Form1.lbl_txtFromEmp.create(label,"From Employee",True,1800,200,1,100,850,True,0,Arial,8,-2147483633,0)
+Gui.SS_Form1.lbl_txtFromEmp.defaultvalue("")
+Gui.SS_Form1.lbl_txtFromEmp.controlgroup(0)
+Gui.SS_Form1.txtFromEmp.create(textbox,"",True,1800,330,0,100,1050,True,0,Arial,8,16777215,1)
+Gui.SS_Form1.txtFromEmp.defaultvalue("")
+Gui.SS_Form1.txtFromEmp.controlgroup(0)
+Gui.SS_Form1.txtFromEmp.tabstop(True)
+Gui.SS_Form1.txtFromEmp.tabindex(3)
+Gui.SS_Form1.cmd_txtFromEmp.create(button)
+Gui.SS_Form1.cmd_txtFromEmp.caption("^")
+Gui.SS_Form1.cmd_txtFromEmp.visible(True)
+Gui.SS_Form1.cmd_txtFromEmp.size(330,330)
+Gui.SS_Form1.cmd_txtFromEmp.zorder(0)
+Gui.SS_Form1.cmd_txtFromEmp.position(1985,1050)
+Gui.SS_Form1.cmd_txtFromEmp.enabled(True)
+Gui.SS_Form1.cmd_txtFromEmp.fontname("Arial")
+Gui.SS_Form1.cmd_txtFromEmp.fontsize(8)
+Gui.SS_Form1.cmd_txtFromEmp.event(Click,cmd_txtfromemp_click)
+Gui.SS_Form1.cmd_txtFromEmp.defaultvalue("")
+Gui.SS_Form1.cmd_txtFromEmp.controlgroup(0)
+Gui.SS_Form1.cmd_txtFromEmp.tabstop(True)
+Gui.SS_Form1.cmd_txtFromEmp.tabindex(4)
+Gui.SS_Form1.lbl_txtToEmp.create(label,"To Employee",True,1800,200,1,2455,850,True,0,Arial,8,-2147483633,0)
+Gui.SS_Form1.lbl_txtToEmp.defaultvalue("")
+Gui.SS_Form1.lbl_txtToEmp.controlgroup(0)
+Gui.SS_Form1.txtToEmp.create(textbox,"",True,1800,330,0,2455,1050,True,0,Arial,8,16777215,1)
+Gui.SS_Form1.txtToEmp.defaultvalue("")
+Gui.SS_Form1.txtToEmp.controlgroup(0)
+Gui.SS_Form1.txtToEmp.tabstop(True)
+Gui.SS_Form1.txtToEmp.tabindex(5)
+Gui.SS_Form1.cmd_txtToEmp.create(button)
+Gui.SS_Form1.cmd_txtToEmp.caption("^")
+Gui.SS_Form1.cmd_txtToEmp.visible(True)
+Gui.SS_Form1.cmd_txtToEmp.size(330,330)
+Gui.SS_Form1.cmd_txtToEmp.zorder(0)
+Gui.SS_Form1.cmd_txtToEmp.position(4340,1050)
+Gui.SS_Form1.cmd_txtToEmp.enabled(True)
+Gui.SS_Form1.cmd_txtToEmp.fontname("Arial")
+Gui.SS_Form1.cmd_txtToEmp.fontsize(8)
+Gui.SS_Form1.cmd_txtToEmp.event(Click,cmd_txttoemp_click)
+Gui.SS_Form1.cmd_txtToEmp.defaultvalue("")
+Gui.SS_Form1.cmd_txtToEmp.controlgroup(0)
+Gui.SS_Form1.cmd_txtToEmp.tabstop(True)
+Gui.SS_Form1.cmd_txtToEmp.tabindex(6)
+Gui.SS_Form1.chkAllEmp.create(checkbox)
+Gui.SS_Form1.chkAllEmp.caption("All Employees")
+Gui.SS_Form1.chkAllEmp.visible(True)
+Gui.SS_Form1.chkAllEmp.size(1800,300)
+Gui.SS_Form1.chkAllEmp.zorder(0)
+Gui.SS_Form1.chkAllEmp.position(100,1385)
+Gui.SS_Form1.chkAllEmp.enabled(True)
+Gui.SS_Form1.chkAllEmp.alignment(0)
+Gui.SS_Form1.chkAllEmp.fontname("Arial")
+Gui.SS_Form1.chkAllEmp.fontsize(8)
+Gui.SS_Form1.chkAllEmp.event(Click,chkallemp_click)
+Gui.SS_Form1.chkAllEmp.defaultvalue("")
+Gui.SS_Form1.chkAllEmp.controlgroup(0)
+Gui.SS_Form1.chkAllEmp.tabstop(True)
+Gui.SS_Form1.chkAllEmp.tabindex(7)
+Gui.SS_Form1.lbl_txtEarn.create(label,"Earning Code",True,1800,200,1,100,1935,True,0,Arial,8,-2147483633,0)
+Gui.SS_Form1.lbl_txtEarn.defaultvalue("")
+Gui.SS_Form1.lbl_txtEarn.controlgroup(0)
+Gui.SS_Form1.txtEarn.create(textbox,"",True,1800,330,0,100,2135,True,0,Arial,8,16777215,1)
+Gui.SS_Form1.txtEarn.defaultvalue("")
+Gui.SS_Form1.txtEarn.controlgroup(0)
+Gui.SS_Form1.txtEarn.tabstop(True)
+Gui.SS_Form1.txtEarn.tabindex(8)
+Gui.SS_Form1.cmd_txtEarn.create(button)
+Gui.SS_Form1.cmd_txtEarn.caption("^")
+Gui.SS_Form1.cmd_txtEarn.visible(True)
+Gui.SS_Form1.cmd_txtEarn.size(330,330)
+Gui.SS_Form1.cmd_txtEarn.zorder(0)
+Gui.SS_Form1.cmd_txtEarn.position(1985,2135)
+Gui.SS_Form1.cmd_txtEarn.enabled(True)
+Gui.SS_Form1.cmd_txtEarn.fontname("Arial")
+Gui.SS_Form1.cmd_txtEarn.fontsize(8)
+Gui.SS_Form1.cmd_txtEarn.event(Click,cmd_txtearn_click)
+Gui.SS_Form1.cmd_txtEarn.defaultvalue("")
+Gui.SS_Form1.cmd_txtEarn.controlgroup(0)
+Gui.SS_Form1.cmd_txtEarn.tabstop(True)
+Gui.SS_Form1.cmd_txtEarn.tabindex(9)
+Gui.SS_Form1.lvwEarnCodes.create(listview)
+Gui.SS_Form1.lvwEarnCodes.view(3)
+Gui.SS_Form1.lvwEarnCodes.addlistviewcolumn("Earning Code",4270,0)
+Gui.SS_Form1.lvwEarnCodes.visible(True)
+Gui.SS_Form1.lvwEarnCodes.size(4670,2000)
+Gui.SS_Form1.lvwEarnCodes.zorder(0)
+Gui.SS_Form1.lvwEarnCodes.position(100,2595)
+Gui.SS_Form1.lvwEarnCodes.enabled(True)
+Gui.SS_Form1.lvwEarnCodes.fontname("Arial")
+Gui.SS_Form1.lvwEarnCodes.fontsize(8)
+Gui.SS_Form1.lvwEarnCodes.event(itemclick,lvwearncodes_itemclick)
+Gui.SS_Form1.lvwEarnCodes.tabstop(True)
+Gui.SS_Form1.lvwEarnCodes.tabindex(11)
+Gui.SS_Form1.cmd_lvwEarnCodesAdd.create(button)
+Gui.SS_Form1.cmd_lvwEarnCodesAdd.caption("Add")
+Gui.SS_Form1.cmd_lvwEarnCodesAdd.visible(True)
+Gui.SS_Form1.cmd_lvwEarnCodesAdd.size(1000,330)
+Gui.SS_Form1.cmd_lvwEarnCodesAdd.zorder(0)
+Gui.SS_Form1.cmd_lvwEarnCodesAdd.position(2455,2135)
+Gui.SS_Form1.cmd_lvwEarnCodesAdd.enabled(True)
+Gui.SS_Form1.cmd_lvwEarnCodesAdd.fontname("Arial")
+Gui.SS_Form1.cmd_lvwEarnCodesAdd.fontsize(8)
+Gui.SS_Form1.cmd_lvwEarnCodesAdd.event(Click,cmd_lvwearncodesadd_click)
+Gui.SS_Form1.cmd_lvwEarnCodesAdd.SetInternationalID(7600)
+Gui.SS_Form1.cmd_lvwEarnCodesAdd.defaultvalue("")
+Gui.SS_Form1.cmd_lvwEarnCodesAdd.controlgroup(0)
+Gui.SS_Form1.cmd_lvwEarnCodesAdd.tabstop(True)
+Gui.SS_Form1.cmd_lvwEarnCodesAdd.tabindex(10)
+Gui.SS_Form1.cmd_lvwEarnCodesDelete.create(button)
+Gui.SS_Form1.cmd_lvwEarnCodesDelete.caption("Delete")
+Gui.SS_Form1.cmd_lvwEarnCodesDelete.visible(True)
+Gui.SS_Form1.cmd_lvwEarnCodesDelete.size(1000,330)
+Gui.SS_Form1.cmd_lvwEarnCodesDelete.zorder(0)
+Gui.SS_Form1.cmd_lvwEarnCodesDelete.position(100,4635)
+Gui.SS_Form1.cmd_lvwEarnCodesDelete.enabled(True)
+Gui.SS_Form1.cmd_lvwEarnCodesDelete.fontname("Arial")
+Gui.SS_Form1.cmd_lvwEarnCodesDelete.fontsize(8)
+Gui.SS_Form1.cmd_lvwEarnCodesDelete.event(Click,cmd_lvwearncodesdelete_click)
+Gui.SS_Form1.cmd_lvwEarnCodesDelete.SetInternationalID(171500)
+Gui.SS_Form1.cmd_lvwEarnCodesDelete.defaultvalue("")
+Gui.SS_Form1.cmd_lvwEarnCodesDelete.controlgroup(0)
+Gui.SS_Form1.cmd_lvwEarnCodesClear.create(button)
+Gui.SS_Form1.cmd_lvwEarnCodesClear.caption("Clear")
+Gui.SS_Form1.cmd_lvwEarnCodesClear.visible(True)
+Gui.SS_Form1.cmd_lvwEarnCodesClear.size(1000,330)
+Gui.SS_Form1.cmd_lvwEarnCodesClear.zorder(0)
+Gui.SS_Form1.cmd_lvwEarnCodesClear.position(1185,4635)
+Gui.SS_Form1.cmd_lvwEarnCodesClear.enabled(True)
+Gui.SS_Form1.cmd_lvwEarnCodesClear.fontname("Arial")
+Gui.SS_Form1.cmd_lvwEarnCodesClear.fontsize(8)
+Gui.SS_Form1.cmd_lvwEarnCodesClear.event(Click,cmd_lvwearncodesclear_click)
+Gui.SS_Form1.cmd_lvwEarnCodesClear.SetInternationalID(106700)
+Gui.SS_Form1.cmd_lvwEarnCodesClear.defaultvalue("")
+Gui.SS_Form1.cmd_lvwEarnCodesClear.controlgroup(0)
+Gui.SS_Form1.cmdOk.create(button)
+Gui.SS_Form1.cmdOk.caption("Ok")
+Gui.SS_Form1.cmdOk.visible(True)
+Gui.SS_Form1.cmdOk.size(1000,360)
+Gui.SS_Form1.cmdOk.zorder(0)
+Gui.SS_Form1.cmdOk.position(100,5195)
+Gui.SS_Form1.cmdOk.enabled(True)
+Gui.SS_Form1.cmdOk.fontname("Arial")
+Gui.SS_Form1.cmdOk.fontsize(8)
+Gui.SS_Form1.cmdOk.event(Click,cmdok_click)
+Gui.SS_Form1.cmdOk.defaultvalue("")
+Gui.SS_Form1.cmdOk.controlgroup(0)
+Gui.SS_Form1.cmdOk.tabstop(True)
+Gui.SS_Form1.cmdOk.tabindex(12)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Variable.Global.sKey.Declare(String)
+Variable.Global.iOrd.Declare(Long,-1)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.ODBC.Connection!Con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+Gui.SS_Form1.lvwEarnCodes.AddListItem("01","01")
+Gui.SS_Form1.lvwEarnCodes.AddListItem("02","02")
+Gui.SS_Form1.lvwEarnCodes.AddListItem("03","03")
+Gui.SS_Form1.lvwEarnCodes.AddListItem("04","04")
+Gui.SS_Form1.lvwEarnCodes.AddListItem("05","05")
+
+Gui.SS_Form1..Show
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3844_STATE_UNEMP_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+Program.Sub.ss_form1_unload.Start
+F.Intrinsic.Control.SetErrorHandler("ss_form1_unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.ODBC.Connection!Con.Close
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("ss_form1_unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3844_STATE_UNEMP_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.ss_form1_unload.End
+
+Program.Sub.cmd_txtfromemp_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmd_txtfromemp_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sColumn.Declare(String)
+V.Local.iWidth.Declare(Long)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.String.Split("Employee*!*Name","*!*",V.Local.sColumn)
+F.Intrinsic.String.Split("800*!*1500","*!*",V.Local.iWidth)
+
+F.Intrinsic.UI.Browser("Employees","Con","SELECT EMPLOYEE, NAME FROM V_EMPLOYEE_MSTR ORDER BY EMPLOYEE ASC",V.Local.sColumn,V.Local.iWidth,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	V.Local.sRet.RedimPreserve(0,1)
+	Gui.SS_Form1.txtFromEmp.Text(V.Local.sRet(0))
+	Gui.SS_Form1.txtToEmp.Text(V.Local.sRet(0))
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txtfromemp_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3844_STATE_UNEMP_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmd_txtfromemp_click.End
+
+Program.Sub.cmd_txttoemp_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmd_txttoemp_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sColumn.Declare(String)
+V.Local.iWidth.Declare(Long)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.String.Split("Employee*!*Name","*!*",V.Local.sColumn)
+F.Intrinsic.String.Split("800*!*1500","*!*",V.Local.iWidth)
+
+F.Intrinsic.UI.Browser("Employees","Con","SELECT EMPLOYEE, NAME FROM V_EMPLOYEE_MSTR ORDER BY EMPLOYEE ASC",V.Local.sColumn,V.Local.iWidth,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	V.Local.sRet.RedimPreserve(0,1)
+	Gui.SS_Form1.txtToEmp.Text(V.Local.sRet(0))
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txttoemp_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3844_STATE_UNEMP_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmd_txttoemp_click.End
+
+Program.Sub.cmd_txtearn_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmd_txtearn_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+
+V.Local.sError.Declare(String)
+V.Local.sEarn.Declare(String)
+V.Local.sTitle.Declare(String)
+V.Local.iWidth.Declare(String)
+V.Local.sColumn.Declare(String)
+V.Local.iCount.Declare(Long)
+V.Local.sSQL.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sCol.Declare(String)
+
+F.Intrinsic.String.Split("EARNINGS_DESC_1*!*EARNINGS_DESC_2*!*EARNINGS_DESC_3*!*EARNINGS_DESC_4*!*EARNINGS_DESC_5*!*EARNINGS_DESC_6*!*EARNINGS_DESC_7*!*EARNINGS_DESC_8*!*EARNINGS_DESC_9*!*EARNINGS_DESC_10","*!*",V.Local.sColumn)
+
+F.Intrinsic.Control.For(V.Local.iCount,V.Local.sColumn.LBound,V.Local.sColumn.UBound,1)
+	F.Intrinsic.Control.If(V.Local.iCount,>,4)
+		'do sql for Pay_Earn_2
+		F.Intrinsic.String.Build("SELECT {0} FROM V_PAY_EARN_2 ",V.Local.sColumn(V.Local.iCount),V.Local.sSQL)
+		F.ODBC.Connection!Con.OpenLocalRecordsetRO("rstEarn2",V.Local.sSQL)
+		F.Intrinsic.Control.If(V.ODBC.Con!rstEarn2.EOF,=,False)
+			V.Local.sCol.Set(V.Local.sColumn(v.Local.iCount))
+			F.Intrinsic.Math.Add(V.Local.iCount,1,V.Local.iCount)
+			F.Intrinsic.Control.If(V.Local.sEarn,<>,"")
+				F.Intrinsic.String.Build("{0}{1}{2}*!*{3}",V.Local.sEarn,"#$#",V.Local.iCount.Format00,V.ODBC.Con!rstEarn2.FieldValTrim![v.Local.sCol],V.Local.sEarn)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.String.Build("{0}{1}{2}*!*{3}",V.Local.sEarn,"",V.Local.iCount.Format00,V.ODBC.Con!rstEarn2.FieldValTrim![v.Local.sCol],V.Local.sEarn)
+			F.Intrinsic.Control.EndIf
+			F.Intrinsic.Math.Sub(V.Local.iCount,1,V.Local.iCount)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.Con!rstEarn2.Close
+	F.Intrinsic.Control.Else
+		'do sql for Pay_Earn_1
+		F.Intrinsic.String.Build("SELECT {0} FROM V_PAY_EARN_1 ",V.Local.sColumn(V.Local.iCount),V.Local.sSQL)
+		F.ODBC.Connection!Con.OpenLocalRecordsetRO("rstEarn1",V.Local.sSQL)
+		F.Intrinsic.Control.If(V.ODBC.Con!rstEarn1.EOF,=,False)
+			V.Local.sCol.Set(V.Local.sColumn(v.Local.iCount))
+			F.Intrinsic.Math.Add(V.Local.iCount,1,V.Local.iCount)
+			F.Intrinsic.Control.If(V.Local.sEarn,<>,"")
+				F.Intrinsic.String.Build("{0}{1}{2}*!*{3}",V.Local.sEarn,"#$#",V.Local.iCount.Format00,V.ODBC.Con!rstEarn1.FieldValTrim![v.Local.sCol],V.Local.sEarn)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.String.Build("{0}{1}{2}*!*{3}",V.Local.sEarn,"",V.Local.iCount.Format00,V.ODBC.Con!rstEarn1.FieldValTrim![v.Local.sCol],V.Local.sEarn)
+			F.Intrinsic.Control.EndIf
+			F.Intrinsic.Math.Sub(V.Local.iCount,1,V.Local.iCount)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.Con!rstEarn1.Close
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iCount)
+
+F.Intrinsic.String.Split("Code*!*Description","*!*",V.Local.sTitle)
+F.Intrinsic.String.Split("800*!*1500","*!*",V.Local.iWidth)
+
+F.Intrinsic.UI.BrowserFromString("Earnings Code",V.Local.sEarn,"*!*","#$#",V.Local.sTitle,V.Local.iWidth,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	V.Local.sRet.RedimPreserve(0,1)
+	Gui.SS_Form1.txtEarn.Text(V.Local.sRet(0))
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txtearn_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3844_STATE_UNEMP_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmd_txtearn_click.End
+
+Program.Sub.cmd_lvwearncodesadd_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmd_lvwearncodesadd_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iOrd.Declare(Long)
+V.Local.sRet.Declare(String)
+
+'get the ordinal to see if it exists
+Gui.SS_Form1.lvwEarnCodes.RetrieveItemOrdinal(V.Screen.SS_Form1!txtEarn.Text,V.Local.iOrd)
+'get all items so we know the count of how many we have
+Gui.SS_Form1.lvwEarnCodes.RetrieveAllListItems(V.Local.sRet)
+F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+
+'if it is not already in the list and it is not blank and we have less than 11 we can add it
+F.Intrinsic.Control.If(V.Local.iOrd,=,-1,"AND",V.Screen.SS_Form1!txtEarn.Text,<>,"",V.Local.sRet.UBound,<,9)
+	Gui.SS_Form1.lvwEarnCodes.AddListItem(V.Screen.SS_Form1!txtEarn.Text,V.Screen.SS_Form1!txtEarn.Text)
+	F.Intrinsic.Control.CallSub(Cmd_lvwearncodesclear_click)
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.If(V.Local.sRet.UBound,>=,9)
+		F.Intrinsic.UI.Msgbox("Too many Earnings Codes. Max of 10","Warning")
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.CallSub(Cmd_lvwearncodesclear_click)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_lvwearncodesadd_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3844_STATE_UNEMP_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmd_lvwearncodesadd_click.End
+
+Program.Sub.lvwearncodes_itemclick.Start
+F.Intrinsic.Control.SetErrorHandler("lvwearncodes_itemclick_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'get the item key
+Gui.SS_Form1.lvwEarnCodes.RetrieveSelectedListitems(V.Global.sKey)
+
+'get the item ordinal
+Gui.SS_Form1.lvwEarnCodes.RetrieveItemOrdinal(V.Global.sKey,V.Global.iOrd)
+
+'set the line of text to textbox
+Gui.SS_Form1.txtEarn.Text(V.Screen.SS_Form1!lvwEarnCodes.ListItemText(v.Global.iOrd))
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("lvwearncodes_itemclick_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3844_STATE_UNEMP_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.lvwearncodes_itemclick.End
+
+Program.Sub.cmd_lvwearncodesdelete_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmd_lvwearncodesdelete_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'remotethe item from the view
+Gui.SS_Form1.lvwEarnCodes.RemoveItem(V.Global.sKey)
+
+'clear text box
+F.Intrinsic.Control.CallSub(Cmd_lvwearncodesclear_click)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_lvwearncodesdelete_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3844_STATE_UNEMP_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmd_lvwearncodesdelete_click.End
+
+Program.Sub.cmd_lvwearncodesclear_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmd_lvwearncodesclear_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Gui.SS_Form1.txtEarn.Text("")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_lvwearncodesclear_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3844_STATE_UNEMP_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmd_lvwearncodesclear_click.End
+
+Program.Sub.cmdok_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdok_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sWhere.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sFileName.Declare(String)
+V.Local.sDateRange.Declare(String)
+V.Local.iRow.Declare(Long)
+V.Local.fTotalEarn.Declare(Float)
+V.Local.sIRAsql.Declare(String)
+V.Local.iIRA.Declare(Float)
+V.Local.iIRA2.Declare(Float)
+
+Gui.SS_Form1..Visible(False)
+
+'check to make sure the dates are in the correct order
+F.Intrinsic.Control.If(V.Screen.SS_Form1!dtpFromDate.Value,>,V.Screen.SS_Form1!dtpToDate.Value)
+	F.Intrinsic.UI.Msgbox("Date range is incorrect.")
+	Gui.SS_Form1..Visible(True)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Else
+	'write date range to be writen
+	F.Intrinsic.String.Build("Date Range: {0} - {1} ",V.Screen.SS_Form1!dtpFromDate.Value,V.Screen.SS_Form1!dtpToDate.Value,V.Local.sDateRange)
+F.Intrinsic.Control.EndIf
+
+'check to make sure the employee range is entered or the flag is checked
+F.Intrinsic.Control.If(V.Screen.SS_Form1!chkAllEmp.Value,=,0)
+	F.Intrinsic.Control.If(V.Screen.SS_Form1!txtFromEmp.Text,=,"","OR",V.Screen.SS_Form1!txtToEmp.Text,=,"")
+		F.Intrinsic.UI.Msgbox("Employee range is not entered")
+		Gui.SS_Form1..Visible(True)
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	'if not all employees and fields aren't blank then create where statement
+	f.Intrinsic.String.Build(" WHERE EMPLOYEE BETWEEN '{0}' AND '{1}' ",V.Screen.SS_Form1!txtFromEmp.Text.Trim,v.Screen.SS_Form1!txtToEmp.Text.Trim,v.Local.sWhere)
+F.Intrinsic.Control.EndIf
+
+'check to make sure the list view is not empty
+Gui.SS_Form1.lvwEarnCodes.RetrieveAllListItems(V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,=,"***NORETURN***")
+	F.Intrinsic.UI.Msgbox("Earnings Code is not entered")
+	Gui.SS_Form1..Visible(True)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+'All checks have passed now it is time to create the excel
+'F.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+F.Intrinsic.String.Replace(V.Local.sRet,"*!*","','",V.Local.sRet)
+
+'build the sql statement
+F.Intrinsic.String.Build("SELECT EMP.EMPLOYEE, (LEFT(EMP.SOCIAL_SECURITY_NO,3) + '-' + SUBSTRING(EMP.SOCIAL_SECURITY_NO,4,2) + '-' + RIGHT(EMP.SOCIAL_SECURITY_NO,4)) AS SOCIAL_SECURITY_NO, NAME,ISNULL( (SELECT SUM(HOURS_R_1) + SUM(HOURS_O_1) + SUM(HOURS_D_1) + SUM(HOURS_R_2) + SUM(HOURS_O_2) + SUM(HOURS_D_2) + SUM(HOURS_R_3) + SUM(HOURS_O_3) + SUM(HOURS_D_3) FROM V_PAY_HIST_EARN WHERE EMPLOYEE = EMP.EMPLOYEE AND DATE_HISTORY BETWEEN '{0}' AND '{1}'),0.0) AS TOTAL_HOURS, ",V.Screen.SS_Form1!dtpFromDate.Value.PervasiveDate,v.Screen.SS_Form1!dtpToDate.Value.PervasiveDate,v.Local.sSQL)
+f.Intrinsic.String.Build("{3} ISNULL((SELECT SUM(REG_DOLLARS_1) + SUM(OT_DOLLARS_1) + SUM(DBL_DOLLARS_1) + SUM(REG_DOLLARS_2) + SUM(OT_DOLLARS_2) + SUM(DBL_DOLLARS_2) + SUM(REG_DOLLARS_3) + SUM(OT_DOLLARS_3) + SUM(DBL_DOLLARS_3) FROM V_PAY_HIST_EARN WHERE EMPLOYEE = EMP.EMPLOYEE AND DATE_HISTORY BETWEEN '{0}' AND '{1}' AND EARNINGS IN ('{4}')),0.0) AS TOTAL_EARNINGS FROM V_EMPLOYEE_MSTR AS EMP {2} ORDER BY EMP.EMPLOYEE ASC ",v.Screen.SS_Form1!dtpFromDate.Value.PervasiveDate,v.Screen.SS_Form1!dtpToDate.Value.PervasiveDate,v.Local.sWhere,v.Local.sSQL,V.Local.sRet,v.Local.sSQL)
+
+F.ODBC.Connection!Con.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+F.Intrinsic.Control.If(V.ODBC.Con!rst.EOF,=,False)
+	'ask where they want to save the file
+
+	F.Intrinsic.UI.ShowSaveFileDialog("","*.xlsx",V.Local.sFileName)
+	F.Intrinsic.Control.If(V.Local.sFileName,<>,"***CANCEL***")
+		'create object for excel
+		F.Automation.MSExcel.CreateAppObject("Excel")
+		'create workbook
+		F.Automation.MSExcel.CreateWorkbook("Excel","Sheet",V.Local.sFileName)
+		'create worksheet
+		F.Automation.MSExcel.CreateWorksheet("Sheet","Page","Report")
+		'create the title
+		F.Automation.MSExcel.WriteCell("Page",1,1,"WA State SUI Tax Report")
+		'create the second title for the date range
+		F.Automation.MSExcel.WriteCell("Page",2,1,V.Local.sDateRange)
+		'create the column headers
+		F.Automation.MSExcel.WriteCell("Page",3,1,"SSN")
+		F.Automation.MSExcel.WriteCell("Page",3,2,"Employee Name")
+		F.Automation.MSExcel.WriteCell("Page",3,3,"Total Hours")
+		F.Automation.MSExcel.WriteCell("Page",3,4,"Total Earnings")
+
+		V.Local.iRow.Set(4)
+
+		'loop through recordset and write all of the rows of data
+		F.Intrinsic.Control.DoUntil(V.ODBC.Con!rst.EOF,=,True)
+			'write social security number to column 1
+			F.Automation.MSExcel.WriteCell("Page",V.Local.iRow,1,V.ODBC.Con!rst.FieldValTrim!SOCIAL_SECURITY_NO)
+			'write name to column 2
+			F.Automation.MSExcel.WriteCell("Page",V.Local.iRow,2,V.ODBC.Con!rst.FieldValTrim!NAME)
+			'write Total Hours to column 3
+			F.Automation.MSExcel.WriteCell("Page",V.Local.iRow,3,V.ODBC.Con!rst.FieldValTrim!TOTAL_HOURS)
+			'Get the total deductions for this employee
+			F.Intrinsic.String.Build("SELECT ISNULL((SUM(PRE_TAX_DEDUCT_1) + SUM(PRE_TAX_DEDUCT_2) + SUM(PRE_TAX_DEDUCT_3)),0.0) AS PRE_TAX_DEDUCT, SUM(IRA_AMOUNT) AS IRA FROM V_PAY_HIST_DED WHERE EMPLOYEE = '{0}' AND EARNINGS = 'DD' AND DATE_HISTORY BETWEEN '{1}' AND '{2}'",V.ODBC.Con!rst.FieldValTrim!EMPLOYEE,v.Screen.SS_Form1!dtpFromDate.Value.PervasiveDate,v.Screen.SS_Form1!dtpToDate.Value.PervasiveDate,V.Local.sSQL)
+			F.ODBC.Connection!Con.OpenLocalRecordsetRO("rstDeduct",V.Local.sSQL)
+
+			'Check to make sure we have a value
+			F.Intrinsic.Control.If(V.ODBC.Con!rstDeduct.EOF,<>,True)
+				V.Local.iIRA.Set(V.ODBC.Con!rstDeduct.FieldValTrim!IRA)
+				
+				'Subtract the total earnings from the Pre tax deductions
+				F.Intrinsic.Math.Sub(V.ODBC.Con!rst.FieldValFloat!TOTAL_EARNINGS,V.ODBC.Con!rstDeduct.FieldValFloat!PRE_TAX_DEDUCT,V.Local.fTotalEarn)
+				F.Intrinsic.Math.Sub(V.Local.fTotalEarn,V.Local.iIRA,V.Local.fTotalEarn)
+				F.Automation.MSExcel.WriteCell("Page",V.Local.iRow,4,V.Local.fTotalEarn)
+			F.Intrinsic.Control.Else
+				'write Total Earnings to column 4
+				F.Automation.MSExcel.WriteCell("Page",V.Local.iRow,4,V.ODBC.Con!rst.FieldValTrim!TOTAL_EARNINGS)
+			F.Intrinsic.Control.EndIf
+
+			F.ODBC.Con!rstDeduct.Close
+			'add 1 to row for the next row
+			F.Intrinsic.Math.Add(V.Local.iRow,1,V.Local.iRow)
+			F.ODBC.Con!rst.MoveNext
+		F.Intrinsic.Control.Loop
+
+		'we are done writing the cells so we need to close things
+		F.Automation.MSExcel.SaveWorkbook("Sheet")
+		F.Automation.MSExcel.DestroyAllObjects("Excel","Sheet","Page")
+
+	F.Intrinsic.Control.Else
+		Gui.SS_Form1..Visible(True)
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Else
+	'no records found
+	F.Intrinsic.UI.Msgbox("No records found")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdok_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3844_STATE_UNEMP_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdok_click.End
+
+Program.Sub.chkallemp_click.Start
+F.Intrinsic.Control.SetErrorHandler("chkallemp_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.SS_Form1!chkAllEmp.Value,=,1)
+	Gui.SS_Form1.txtFromEmp.Text("")
+	Gui.SS_Form1.txtFromEmp.Enabled(FALSE)
+	Gui.SS_Form1.cmd_txtFromEmp.Enabled(FALSE)
+	Gui.SS_Form1.txtToEmp.Text("")
+	Gui.SS_Form1.txtToEmp.Enabled(FALSE)
+	Gui.SS_Form1.cmd_txtToEmp.Enabled(FALSE)
+F.Intrinsic.Control.Else
+	Gui.SS_Form1.txtFromEmp.Enabled(TRUE)
+	Gui.SS_Form1.cmd_txtFromEmp.Enabled(TRUE)
+	Gui.SS_Form1.txtToEmp.Enabled(TRUE)
+	Gui.SS_Form1.cmd_txtToEmp.Enabled(TRUE)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("chkallemp_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3844_STATE_UNEMP_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.chkallemp_click.End
+
+Program.Sub.Comments.Start
+${$0$}$GCG_3844_STATE_UNEMP_RPT$}$SS1$}$5/10/2016$}$False
+${$3$}$0$}$$}$-1$}$-1$}$$}$1/1/1900$}$State Unemployment Tax Report
+Program.Sub.Comments.End
+
+Program.Sub.ScreenSS.Start
+SS_Form1{{CAPTION::State Unemployment Tax Report
+SS_Form1.CTRL{{NAME::dtpFromDate\\TYPE::6\\CAPTION::From Date\\TABSTOP::1\\GROUP::1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::dtpToDate\\TYPE::6\\CAPTION::To Date\\TABSTOP::2\\GROUP::1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::txtFromEmp\\TYPE::2\\CAPTION::From Employee\\TABSTOP::3\\GROUP::2\\BROWSER::1\\SIZE::1
+SS_Form1.CTRL{{NAME::txtToEmp\\TYPE::2\\CAPTION::To Employee\\TABSTOP::4\\GROUP::2\\BROWSER::1\\SIZE::1
+SS_Form1.CTRL{{NAME::chkAllEmp\\TYPE::9\\CAPTION::All Employees\\TABSTOP::5\\GROUP::-1\\SUBGROUP::1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::txtEarn\\TYPE::2\\CAPTION::Earning Code\\RANGE::lvwEarnCodes\\TABSTOP::6\\GROUP::3\\BROWSER::1\\SIZE::1
+SS_Form1.CTRL{{NAME::lvwEarnCodes\\TYPE::7\\CAPTION::Earning Codes\\TABSTOP::7\\GROUP::-1\\SUBGROUP::1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::cmdOk\\TYPE::5\\CAPTION::Ok\\TABSTOP::8\\GROUP::-1\\BROWSER::0\\SIZE::1
+
+Program.Sub.ScreenSS.End
+
